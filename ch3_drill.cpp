@@ -29,7 +29,7 @@ int main() //chapter 3 drill
 	cin>>age;
 	if (age<=0 || age>=110)
 		{
-			cout<<"Csak viccelsz!"; cout<<'\n';
+			simple_error("Csak viccelsz!"); 
 		}
 	if (!(age<=0) && !(age>=110))
 		{
