@@ -1,16 +1,16 @@
 #include "std_lib_facilities.h"
-void kiir (vector<double> vektor, int db)
+void kiir (vector<double> vektor)
 {
 	int i;
-	for(i=0; i<db; i++)
+	for(i=0; i<vektor.size(); i++)
 		cout<<"PageRank["<< i <<"]:\t" <<vektor[i] <<'\n';
 }
 
-double tavolsag(vector<double> PR, vector<double> PRv,int n)
+double tavolsag(vector<double> PR, vector<double> PRv)
 {
 	double osszeg = 0.0;
 	int i;
-	for(i=0;i<n;i++)
+	for(i=0;i<PR.size();i++)
 		osszeg +=(PRv[i] - PR[i])*(PRv[i] - PR[i]);
 	return sqrt(osszeg);
 }
