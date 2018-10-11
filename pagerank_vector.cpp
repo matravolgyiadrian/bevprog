@@ -37,11 +37,11 @@ int main()
 			for(j=0; j<4; ++j)
 				PR[i]+=L[i][j]*PRv[j];
 		}
-		if ( tavolsag(PR,PRv, 4) < 0.0000000001)
+		if ( tavolsag(PR,PRv) < 0.0000000001)
 			break;
 		for(i=0; i<4; ++i)
 			PRv[i]=PR[i];
 	}
-	kiir (PR,4);
+	kiir (PR);
 	return 0;
 } 
